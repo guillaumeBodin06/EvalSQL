@@ -40,12 +40,3 @@ CREATE TABLE price (
 );
 
 
-/* Table d'association */
-
-CREATE TABLE assigned_room (
-  mouvi_id INT(11) NOT NULL,
-  room_id INT(11) NOT NULL,
-  PRIMARY KEY (mouvi_id, room_id),
-  FOREIGN KEY (mouvi_id) REFERENCES mouvi(id),
-  FOREIGN KEY (room_id) REFERENCES rooms(id)
-);
